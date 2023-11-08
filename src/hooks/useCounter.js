@@ -7,13 +7,12 @@ export const useCounter = (valorInicial = 0) => {
         setContador(contador + valor)
     
    }
-    const decrementar = (valor = 1, negativo) => {
+    const decrementar = (valor = 1, negativo = true) => {
         if(negativo && contador - valor < 0){
 
             setContador(0)
             return
-        } 
-
+        }
         setContador(contador - valor)
 
     }
